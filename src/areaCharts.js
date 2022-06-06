@@ -22,7 +22,7 @@ export default function createChart(
       plotBands: plotbandDates,
       type: 'datetime',
       tickmarkPlacement: 'between',
-      tickInterval: 1,
+      // tickInterval: 1,
       categories: time,
       title: {
         enabled: false,

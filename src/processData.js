@@ -9,7 +9,7 @@ export default function processData(src) {
   const datetime = src.map((val) => {
     let unixStr = val[0].toString();
     // May 05 11:20
-    let displayFmt = moment(parseInt(unixStr)).format('hh:mm');
+    let displayFmt = moment(parseInt(unixStr)).format('MMM, DD hh:mm');
     return displayFmt;
   });
   result['datetime'] = datetime;
@@ -62,7 +62,7 @@ function plotbandDates(src) {
     plotBands.push({
       color: plotBandColor,
       from: index * 331,
-      to: index * 331 + 300,
+      to: (index*331)+330,
       low: '0%',
       high: '100%',
       zIndex: 5,
